@@ -1,0 +1,126 @@
+/*Remove default margin and padding & apply font-family to the entire doc*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+/*Center the content of the doc using flexbox*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Arrange the grid to 4 equal columns and 3 equal rows*/
+.dashboard {
+    width: 800px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: "h h h h"
+                         "s m m m"
+                         "a b c d";
+}
+
+/*Apply styling to h1 to make it centered*/
+h1 {
+    grid-area: h;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Apply margin to h2 throughout the doc*/
+h2 {
+    margin: 15px 15px 0px 15px;
+}
+
+/*Apply margin to p throughout the doc*/
+p {
+    margin: 0 15px 15px 15px;
+}
+
+/*Apply universal styling to all of the grid-cells*/
+.grid-cell {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/*Apply styling to population grid-cell*/
+.population {
+    grid-area: s;
+    background-image: url(images/finland-8.jpg);
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/*Apply styling to welcome grid-cell*/
+.welcome {
+    grid-area: m;
+    background-image: url(images/finland-2.jpg);
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/*Apply styling to welcome grid-cell*/
+.gdp {
+    grid-area: a;
+    background-image: url(images/finland-3.jpg);
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/*Apply styling to code grid-cell*/
+.code {
+    grid-area: b;
+    background-image: url(images/finland-4.jpg);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/*Apply styling to govt grid-cell*/
+.govt {
+    grid-area: c;
+    background-image: url(images/finland-1.jpg);
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/*Apply styling to news grid-cell*/
+.news {
+    grid-area: d;
+    background-image: url(images/finland-5.jpg);
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Set specific margin to h2 element within the news grid-cell*/
+.news h2 {
+    margin-bottom: 5px;
+}
+
+/*Apply styling to input elements*/
+input {
+    align-self: stretch;
+}
+
+/*Set specific margin to label, input, and button elements*/
+label, input, button {
+    margin: 0px 15px 5px 15px;
+}
+
+/*Apply styling to the button*/
+button {
+    padding: 2px 5px 0 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    align-self: flex-end;
+}
